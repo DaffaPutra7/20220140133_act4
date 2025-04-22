@@ -1,3 +1,4 @@
+import 'package:act4_20220140133/registerpage.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -63,7 +64,8 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () {
                   Navigator.push(
                     context, 
-                    MaterialPageRoute(builder: (context) => RegisterPage)),
+                    MaterialPageRoute(builder: (context) => RegisterPage()),
+                  );
               }, 
               child: Text('Belum punya akun? Daftar'),
               ),
