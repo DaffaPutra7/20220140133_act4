@@ -83,7 +83,7 @@ class _OrderPageState extends State<OrderPage> {
                       builder:
                         (context) => DetailOrderPage(
                           jumlahMakanan: jumlahMakananController.text,
-                          jumlahMinumanController: jumlahMinumanController.text,
+                          jumlahMinuman: jumlahMinumanController.text,
                           makanan: makananController.text,
                           minuman: minumanController.text,
                           totalHarga: totalHarga,
