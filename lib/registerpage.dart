@@ -52,7 +52,13 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  if (_formKey.currentState!.validate()) {} }, 
+                  if (_formKey.currentState!.validate()) {
+                    Navigator.pushReplacement(
+                      context, 
+                      MaterialPageRoute(builder: (context) => const LoginPage())
+                    );
+                  }
+                }, 
                 child: Text('Register')),
               TextButton(
                 onPressed: () {
