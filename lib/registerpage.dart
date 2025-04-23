@@ -1,3 +1,4 @@
+import 'package:act4_20220140133/loginpage.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -18,8 +19,10 @@ class _RegisterPageState extends State<RegisterPage> {
 
   @override
   Widget build(BuildContext context) {
+    final _formKey = GlobalKey<FormState>();
     return Scaffold(
       body: Form(
+        key: _formKey,
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
@@ -47,7 +50,10 @@ class _RegisterPageState extends State<RegisterPage> {
                   return null;
                 },
               ),
-              ElevatedButton(onPressed: () {}, child: Text('Register')),
+              ElevatedButton(
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {} }, 
+                child: Text('Register')),
               TextButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/login');
